@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Matemasie&family=Permanent+Marker&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Matemasie&family=Oswald:wght@200..700&family=Permanent+Marker&display=swap"
+    rel="stylesheet">
+
+  <link href="styles.css" rel="stylesheet">
+
+
+  <link rel="icon" href="URL-OF-YOUR-ICON" type="image/png">
+  <title>test</title>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      background-color: #333333;
+      font-family: "Noto Serif", serif;
+      color: aliceblue;
+      padding: 0;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .hero-section {
+      width: 100%;
+      height: 100vh;
+      padding: 0;
+      background-color: black;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 15px 0px;
+    }
+
+    .list {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      justify-content: space-between;
+
+    }
+
+    .list a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    .hero {
+      width: 100%;
+      height: 70%;
+
+    }
+
+    @media (max-width: 920px) {
+      .hero h1 {
+        font-size: 50px !important;
+      }
+    }
+
+    .hero img {
+      width: 100%;
+      filter: blur(4px);
+      height: 93vh;
+      object-fit: cover;
+    }
+
+    .text-over {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: aliceblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: -10px;
+    }
+
+    .butt1 {
+      border: none;
+      font-size: 20px;
+      border-radius: 3px;
+      padding: 4px 40px;
+      margin-top: 1px;
+      width: 170px;
+      height: 40px;
+      color: rgb(0, 0, 0);
+      background-color: antiquewhite;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .butt1:hover {
+      transform: scale(1.1);
+    }
+
+    .menu {
+      /* height: 115vh;   */
+    }
+
+    .menu2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 110px;
+
+    }
+
+    @media (max-width: 920px) {
+      .menu2 {
+        flex-direction: column;
+      }
+    }
+
+    .left-side {
+      width: 50%;
+      height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      margin-left: 30px;
+
+    }
+
+    .right-side {
+      height: 70vh;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+
+    }
+
+    @media (max-width: 920px) {
+
+      .left-side,
+      .right-side {
+        height: auto;
+      }
+    }
+
+    .left-side hr {
+      border: none;
+      height: 1px;
+      background-color: rgb(214, 174, 79);
+      width: 100%;
+      transform: translateY(6px);
+      margin-bottom: 15px;
+      margin-top: -15px;
+      margin-left: -15px;
+    }
+
+    .right-side hr {
+      border: none;
+      height: 1px;
+      background-color: rgb(214, 174, 79);
+      width: 100%;
+      transform: translateY(6px);
+      margin-bottom: 15px;
+      margin-top: -15px;
+      margin-left: -15px;
+    }
+
+    .online-order {
+      /* height: 100vh; */
+      /* margin-bottom: 200px; */
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav-item {
+      color: #ccc;
+      border: none;
+    }
+
+    .custom-tab {
+      background-color: #e0e0e0;
+      color: #000;
+
+    }
+
+    .custom-tab.active {
+      background-color: #060605 !important;
+      color: #fff;
+
+    }
+
+    .button-order {
+      background-color: rgb(65, 65, 65);
+      width: 16%;
+      color: rgb(162, 162, 162);
+      padding-left: 40px;
+      padding-top: 3px;
+      margin-top: 9px;
+      margin-bottom: 9px;
+      border-radius: 20px;
+      height: 35px;
+      display: inline-block;
+      cursor: pointer;
+      position: relative;
+
+    }
+
+    .button-order:hover {
+      background-color: rgb(162, 162, 162);
+      color: rgb(3, 2, 2);
+      border: #c1ae43;
+      transition: 0.02;
+    }
+
+
+
+    .checkmark {
+      display: none;
+      margin-left: 8px;
+      font-size: 16px;
+
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    input[type="checkbox"]:checked+.checkmark {
+      display: inline;
+    }
+
+
+
+
+
+
+    .menuuu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: start;
+      align-items: center;
+
+    }
+
+
+    .menu-item input[type="checkbox"] {
+      display: none;
+    }
+
+
+    .menu-item {
+
+      justify-content: center;
+      border: 2px solid #000000;
+      border-radius: 8px;
+      background-color: #333333;
+      cursor: pointer;
+      width: 180px;
+      height: 150px;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    @media (max-width: 920px) {
+      .menu-item {
+        width: 100%;
+      }
+    }
+
+
+    .menu-item input[type="checkbox"]:checked+span {
+      background-color: #333333;
+      color: white;
+      border: 2px solid #e7bc57;
+    }
+
+
+    .menu-item span {
+      display: flex;
+      justify-content: center;
+      height: 150px;
+      padding: 15px;
+      padding-bottom: 5px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+
+
+
+
+    .reservation {
+      height: 120vh;
+      margin-top: 100px;
+    }
+
+    .dropdown1 {
+      border-radius: 5px;
+    }
+
+    .dropdown11 {
+      padding: 10px 77px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .dropdown2 {
+      border-radius: 5px;
+    }
+
+    .dropdown22 {
+      padding: 10px 67px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ffffff;
+    }
+
+    .dropdown3 {
+      border-radius: 5px;
+    }
+
+    .dropdown33 {
+      padding: 10px 80px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ffffff;
+    }
+
+    .allowed-time {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+  
+    }
+
+
+
+    .box {
+      width: 23%;
+      padding: 10px 80px;
+
+      text-align: center;
+      font-size: 18px;
+      background-color: #efcf63;
+      color: #1e1818;
+    }
+
+    .box-unavailable {
+      padding: 10px 80px;
+      color: #ccc;
+      opacity: 30%;
+      background-color: #232323;
+      cursor: not-allowed;
+      text-align: center;
+      width: 23%;
+    }
+
+    .reserve-butt {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: #c1ae43;
+      font-size: 15px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      border-radius: 5px;
+      padding: 10px 45px;
+      margin: 40px auto 0 auto;
+    }
+
+    .reserve-butt:hover {
+      background-color: #010101;
+      color: #c1ae43;
+      transition: 0.02;
+
+      border-width: 2px;
+    }
+
+    .time {
+      height: 25px;
+      width: 25px;
+    }
+
+    .location {
+      height: 25px;
+      width: 25px;
+    }
+
+    .instagram {
+      height: 28px;
+      width: 28px;
+    }
+
+    .facebook {
+      height: 29px;
+      width: 29px;
+    }
+
+    .whatsaap {
+      height: 38px;
+      width: 38px;
+    }
+
+    .logo {
+      height: 28px;
+      width: 28px;
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="">
+    <section class="hero-section">
+      <div class="nav container">
+        <div class="logo">
+          <svg class="logo" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <style type="text/css">
+                .st0 {
+                  fill: #e8c758;
+                }
+              </style>
+              <g>
+                <path class="st0"
+                  d="M83.344,19.781C37.313,19.781,0,65.844,0,117.828c0,31.641,14.875,59.547,33.063,76.906 C49.031,210,58.828,221.75,60.781,247.25v244.969h45.109V247.25c1.953-25.5,11.766-37.25,27.734-52.516 c18.188-17.359,33.063-45.266,33.063-76.906C166.688,65.844,129.359,19.781,83.344,19.781z">
+                </path>
+                <path class="st0"
+                  d="M328.391,54.188v89c0,5.688-4.609,10.297-10.297,10.297h-2.75c-5.688,0-10.297-4.609-10.297-10.297V53.781 c0-14.688-9.859-19.063-19.328-19.063s-19.344,4.375-19.344,19.063v89.406c0,5.688-4.609,10.297-10.281,10.297h-2.75 c-5.688,0-10.281-4.609-10.281-10.297v-89c0-26.281-37.469-25.375-37.469,0.281c0,30.719,0,84.984,0,84.984 c-0.156,47.219,11.109,59.453,29.75,74.172c15,11.844,27.813,18.641,27.813,48.047v230.547h45.125V261.672 c0-29.406,12.813-36.203,27.813-48.047c18.625-14.719,29.906-26.953,29.734-74.172c0,0,0-54.266,0-84.984 C365.828,28.813,328.391,27.906,328.391,54.188z">
+                </path>
+                <path class="st0"
+                  d="M454.672,63.047c-8.172,27.297-32.75,90.063-38.891,145.344c-6.125,55.266,22.531,73.688,40.938,104.391 l10.172,25.609v153.828h44.891H512c0-7.547,0-138.297,0-230.031c0-90.766,0-183.203,0-199.141 C512,30.281,466.969,22.094,454.672,63.047z">
+                </path>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="list">
+
+          <a href="#Home">Home</a>
+          <a href="#menu">menu</a>
+          <a href="#online-order">online order</a>
+          <a href="#reservation">reservation</a>
+        </div>
+        <div style=" display: flex; justify-content: center; ">
+          <svg class="instagram" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                fill="#ffffff"></path>
+              <path
+                d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
+                fill="#ffffff"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
+                fill="#ffffff"></path>
+            </g>
+          </svg>
+          <svg class="facebook" viewBox="0 0 20 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M12 2.03998C6.5 2.03998 2 6.52998 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.84998C10.44 7.33998 11.93 5.95998 14.22 5.95998C15.31 5.95998 16.45 6.14998 16.45 6.14998V8.61998H15.19C13.95 8.61998 13.56 9.38998 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.57C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.52998 17.5 2.03998 12 2.03998Z">
+              </path>
+            </g>
+          </svg>
+          <svg class="whatsaap" viewBox="0 0 18 24" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M11.42 9.49c-.19-.09-1.1-.54-1.27-.61s-.29-.09-.42.1-.48.6-.59.73-.21.14-.4 0a5.13 5.13 0 0 1-1.49-.92 5.25 5.25 0 0 1-1-1.29c-.11-.18 0-.28.08-.38s.18-.21.28-.32a1.39 1.39 0 0 0 .18-.31.38.38 0 0 0 0-.33c0-.09-.42-1-.58-1.37s-.3-.32-.41-.32h-.4a.72.72 0 0 0-.5.23 2.1 2.1 0 0 0-.65 1.55A3.59 3.59 0 0 0 5 8.2 8.32 8.32 0 0 0 8.19 11c.44.19.78.3 1.05.39a2.53 2.53 0 0 0 1.17.07 1.93 1.93 0 0 0 1.26-.88 1.67 1.67 0 0 0 .11-.88c-.05-.07-.17-.12-.36-.21z">
+              </path>
+              <path
+                d="M13.29 2.68A7.36 7.36 0 0 0 8 .5a7.44 7.44 0 0 0-6.41 11.15l-1 3.85 3.94-1a7.4 7.4 0 0 0 3.55.9H8a7.44 7.44 0 0 0 5.29-12.72zM8 14.12a6.12 6.12 0 0 1-3.15-.87l-.22-.13-2.34.61.62-2.28-.14-.23a6.18 6.18 0 0 1 9.6-7.65 6.12 6.12 0 0 1 1.81 4.37A6.19 6.19 0 0 1 8 14.12z">
+              </path>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <div class="hero" id="Home">
+        <img src="./assets/831fd950190f65c391f13815062a0478.jpg" alt="img1" />
+        <div class="text-over">
+          <h1 style="font-size: 100px; margin-bottom: 5px">STEAKHOUSE</h1>
+          <p style="font-size: x-large; margin-top: 5px">
+            GREAT PALESTENIAN FOOD
+          </p>
+          <button class="butt1">
+            MENU
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu container" id="menu">
+      <h1
+        style="display: flex; justify-content: center; margin-top: 70px; font-size: 60px; font-family: Matemasie, sans-serif;  text-shadow: 2px 5px 10px rgba(255, 198, 67, 0.7);">
+        MENU</h1>
+      <div class="menu2">
+        <div class="left-side">
+
+          <h4 style="font-size: xxx-large; font-family: Bebas Neue, sans-serif ; color: rgb(186, 144, 54);">STEAK</h4>
+          <p style="font-size: small; color: rgb(186, 144, 54); font-family: sans-serif;"> beef steaks,expertly crafted
+            for a memorable dining experience</p>
+          <hr>
+          <h4 style="font-size: x-large; font-family:Oswald, sans-serif; color: rgb(186, 144, 54);">Ribeye</h4>
+          <div style="display: flex; flex-direction: row; justify-content: space-between;  width: 500px;">
+            <p style="font-size: small; color: rgb(186, 144, 54); font-family:sans-serif">Fatty and juicy, rich flavor
+            </p>
+            <p style="font-size: 14px;">9.00</p>
+          </div>
+          <hr>
+          <h4 style="font-size: x-large; font-family:Oswald, sans-serif; color: rgb(186, 144, 54);">Tenderloin</h4>
+          <div style="display: flex; flex-direction: row; justify-content: space-between;  width: 500px;">
+            <p style="font-size: small; color: rgb(186, 144, 54); font-family: sans-serif;">Tender cut, soft texture</p>
+            <p style="font-size: 14px;">9.00</p>
+          </div>
+          <hr>
+          <h4 style="font-size: x-large; font-family:Oswald, sans-serif; color: rgb(186, 144, 54);">Sirloin</h4>
+          <div style="display: flex; flex-direction: row; justify-content: space-between;  width: 500px;">
+            <p style="font-size: small; color: rgb(186, 144, 54); font-family:sans-serif;">Bold taste, leaner cut</p>
+            <p style="font-size: 14px;">9.00</p>
+          </div>
+          <hr>
+          <h4 style="font-size: x-large; font-family:Oswald, sans-serif; color: rgb(186, 144, 54);">Brisket</h4>
+          <div style="display: flex; flex-direction: row; justify-content: space-between;  width: 500px;">
+            <p style="font-size: small; color: rgb(186, 144, 54); font-family: sans-serif;">Smoked, tender, and
+              flavorful</p>
+            <p style="font-size: 14px;">9.00</p>
+          </div>
+
+        </div>
+
+        <div class="right-side">
+          <h4 style="font-size: xxx-large; font-family:Bebas Neue, sans-serif; color: rgb(186, 144, 54);">SIDE DISHES
+          </h4>
+          <p style="font-size: small; color: rgb(186, 144, 54); font-family: sans-serif;">Side dishes designed to
+            complement your experience</p>
+          <hr>
+          <h4 style="font-size: x-large; font-family:Oswald, sans-serif; color: rgb(186, 144, 54);">ceasar salad</h4>
+          <div style="display: flex; flex-direction: row; justify-content: space-between;  width: 500px;">
+            <p style="font-size: small; color: rgb(186, 144, 54); font-family:sans-serif;">Romaine
+              lettuceCroutons,Parmesan cheese</p>
+            <p style="font-size: 14px;">9.00</p>
+          </div>
+          <hr>
+          <h4 style="font-size: x-large; font-family:Oswald, sans-serif; color: rgb(186, 144, 54);">kobba salad</h4>
+          <div style="display: flex; flex-direction: row; justify-content: space-between;  width: 500px;">
+            <p style="font-size: small; color: rgb(186, 144, 54); font-family:sans-serif;">Kibbeh (fried or baked),Mixed
+              greens,Olive oil</p>
+            <p style="font-size: 14px;">9.00</p>
+          </div>
+          <hr>
+          <h4 style="font-size: x-large; font-family:Oswald, sans-serif; color: rgb(186, 144, 54);">potato wedges</h4>
+          <div style="display: flex; flex-direction: row; justify-content: space-between;  width: 500px;">
+            <p style="font-size: small; color: rgb(186, 144, 54); font-family:sans-serif;">Potatoes,Olive
+              oil,Garlic,Paprika,rosemary</p>
+            <p style="font-size: 14px;">9.00</p>
+          </div>
+          <hr>
+          <h4 style="font-size: x-large; font-family:Oswald, sans-serif; color: rgb(186, 144, 54);">crab cakes</h4>
+          <div style="display: flex; flex-direction: row; justify-content: space-between;  width: 500px;">
+            <p style="font-size: small; color: rgb(186, 144, 54); font-family: sans-serif;">
+              Crab,eat,Eggs,Breadcrumbs,mustard,Parsley</p>
+            <p style="font-size: 14px;">9.00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"></script>
+
+    <section class="online-order container" id="online-order">
+      <div style="">
+        <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 40px;margin-bottom: 3px;">
+          ORDER ONLINE</h1>
+        <p>You can order online ! Brows our menu itemsand choose what would you’d like to orderfrom us</p>
+        <label class="button-order">
+          <input type="checkbox" id="checkmark">
+          Accepting order
+          <span class="checkmark">✔️</span>
+        </label>
+      </div>
+      <div style="display: flex;">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link custom-tab active" id="pills-online-tab" data-bs-toggle="pill"
+              data-bs-target="#pills-online" type="button" role="tab" aria-controls="pills-online"
+              aria-selected="true">Pickup Order</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link custom-tab" id="pills-pickup-tab" data-bs-toggle="pill"
+              data-bs-target="#pills-pickup" type="button" role="tab" aria-controls="pills-pickup"
+              aria-selected="false">Online Order</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-online" role="tabpanel" aria-labelledby="pills-online-tab">
+          <div style="display: flex; gap: 30px;">
+
+            <div style="display: flex; gap: 3px;"> <svg class="time" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M23 12C23 18.0751 18.0751 23 12 23C5.92487 23 1 18.0751 1 12C1 5.92487 5.92487 1 12 1C18.0751 1 23 5.92487 23 12ZM3.00683 12C3.00683 16.9668 7.03321 20.9932 12 20.9932C16.9668 20.9932 20.9932 16.9668 20.9932 12C20.9932 7.03321 16.9668 3.00683 12 3.00683C7.03321 3.00683 3.00683 7.03321 3.00683 12Z"
+                    fill="#ffffff"></path>
+                  <path
+                    d="M12 5C11.4477 5 11 5.44771 11 6V12.4667C11 12.4667 11 12.7274 11.1267 12.9235C11.2115 13.0898 11.3437 13.2343 11.5174 13.3346L16.1372 16.0019C16.6155 16.278 17.2271 16.1141 17.5032 15.6358C17.7793 15.1575 17.6155 14.5459 17.1372 14.2698L13 11.8812V6C13 5.44772 12.5523 5 12 5Z"
+                    fill="#ffffff"></path>
+                </g>
+              </svg>
+              <p style="color: #e7e3bd;">Pickup Time: up to 30 minutes </p>
+            </div>
+            <div style="display: flex; gap: 3px;"> <svg class="location" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z"
+                    stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path
+                    d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z"
+                    stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+              </svg>
+              <p style="color: #e7e3bd;">Pickup Address: Gaza,Alnusirat</p>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="pills-pickup" role="tabpanel" aria-labelledby="pills-pickup-tab">
+          <h6>write your nymber</h6>
+          <textarea style="height: 30px; width: 170px;"></textarea>
+        </div>
+        <h1 style="padding-top:40px ; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">MENU</h1>
+        <hr style="color: #d4c77f; height: 5px; box-shadow: 0 4px 6px rgba(255, 248, 147, 0.8);">
+        <h2
+          style="padding:50px 0 10px 0 ; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #ffdcb7;"
+          ;>STEAK</h2>
+        <div class="menuuu">
+          <label class="menu-item">
+            <input type="checkbox">
+            <span
+              style="display: flex; flex-direction: column; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+              <h4>Ribeye</h4>
+              <p style="opacity: 50%;  font-size: 10px;">Fatty and juicy, rich flavor</p>
+              <p>9.00</p>
+            </span>
+          </label>
+          <label class="menu-item">
+            <input type="checkbox">
+            <span
+              style="display: flex; flex-direction: column; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+              <h4>Tenderloin</h4>
+              <p style="opacity: 50%;  font-size: 10px;">Tender cut, soft texture</p>
+              <p>9.00</p>
+            </span>
+          </label>
+          <label class="menu-item">
+            <input type="checkbox">
+            <span
+              style="display: flex; flex-direction: column; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+              <h4>Sirloin</h4>
+              <p style="opacity: 50%;  font-size: 10px;">Bold taste, leaner cut ,strong flavor</p>
+              <p>9.00</p>
+            </span>
+          </label>
+          <label class="menu-item">
+            <input type="checkbox">
+            <span
+              style="display: flex; flex-direction: column; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+              <h4>Brisket</h4>
+              <p style="opacity: 50%;  font-size: 10px;">Smoked, tender, and flavorful</p>
+              <p>9.00</p>
+            </span>
+          </label>
+        </div>
+
+        <h2
+          style="padding: 50px 0 10px 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #ffdcb7;">
+          SIDE DISHES</h2>
+        <div class="menuuu">
+          <label class="menu-item">
+            <input type="checkbox">
+            <span
+              style="display: flex; flex-direction: column; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+              <h4>ceasar salad</h4>
+              <p style="opacity: 50%;  font-size: 10px; ">Romaine lettuceCroutons,Parmesan cheese</p>
+              <p>9.00</p>
+            </span>
+          </label>
+          <label class="menu-item">
+            <input type="checkbox">
+            <span
+              style="display: flex; flex-direction: column; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+              <h4>kobba salad</h4>
+              <p style="opacity: 50%; font-size: 10px;">Kibbeh (fried or baked),<br>Mixed greens, <br>Olive oil</p>
+              <p>9.00</p>
+            </span>
+          </label>
+          <label class="menu-item">
+            <input type="checkbox">
+            <span
+              style="display: flex; flex-direction: column; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+              <h4>potato wed.</h4>
+              <p style="opacity: 50%;  font-size: 10px;">Potatoes,Olive oil,<br>Garlic,Paprika,<br>rosemary</p>
+              <p>9.00</p>
+            </span>
+          </label>
+          <label class="menu-item">
+            <input type="checkbox">
+            <span
+              style="display: flex; flex-direction: column; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+              <h4>crab cakes</h4>
+              <p style="opacity: 50%;  font-size: 10px;">Crab,eat,Eggs,<br>Breadcrumbs,mustard,<br>Parsley</p>
+              <p>9.00</p>
+            </span>
+          </label>
+        </div>
+
+
+
+
+
+      </div>
+  </div>
+
+  </section>
+
+  <section class="reservation container" id="reservation">
+
+
+
+    <h1
+      style="  color:#c1ae43; font-size: 52px; font-family: 'Lucida Sans', 'Lucida Sans Regular','Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana,sans-serif; display: flex; justify-content: center;">
+      MAKE A RESERVATION</h1>
+    <p style=" font-size: 16px; color: #e2e2e2 ;display: flex; justify-content: center;">help us find best tabel for you
+      , select the party size, date,and time of your reservation</p>
+ 
+
+
+
+    <div style="display: flex; flex-wrap:wrap; justify-content: center;align-items: center;gap: 20px;">
+      <div class="dropdown1" style="display: flex; flex-direction: column;">
+        <label for="num">Party Size</label>
+        <select id="num" class="dropdown11">
+          <option value="" disabled selected></option>
+          <option value="1">2 guestes</option>
+          <option value="2">3 guestes</option>
+          <option value="3">4 guestes</option>
+          <option value="4">5 guestes</option>
+          <option value="5">6 guestes</option>
+          <option value="6">7 guestes</option>
+          <option value="7">8 guestes</option>
+          <option value="8">9 guestes</option>
+          <option value="9">10 guestes</option>
+          <option value="10">11 guestes</option>
+          <option value="11">12 guestes</option>
+        </select>
+      </div>
+      <div class="dropdown2"  style="display: flex; flex-direction: column;">
+        <label for="days">Date</label>
+        <select id="days" class="dropdown22">
+          <option value="" disabled selected></option>
+
+          <option value="1">1 September</option>
+          <option value="2">2 September</option>
+          <option value="3">3 September</option>
+          <option value="4">4 September</option>
+          <option value="5">5 September</option>
+          <option value="6">6 September</option>
+          <option value="7">7 September</option>
+          <option value="8">8 September</option>
+          <option value="9">9 September</option>
+          <option value="10">10 September</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+        </select>
+      </div>
+      <div class="dropdown3" style="display: flex; flex-direction: column;">
+        <label for="time">Time</label>
+        <select id="time" class="dropdown33">
+          <option value="" disabled selected></option>
+          <option value="">8:00 AM</option>
+          <option value="">8:30 AM</option>
+          <option value="">10:00 AM</option>
+          <option value="">10:30 AM</option>
+          <option value="">11:00 AM</option>
+          <option value="">12:00 PM</option>
+          <option value="">02:00 PM</option>
+          <option value="">03:00 PM</option>
+          <option value="">04:30 PM</option>
+          <option value="">6:00 PM</option>
+        </select>
+      </div>
+    </div>
+    <hr style="width: 76%; margin: 50px auto" />
+    <p style="margin: 8px auto; font-size: large">
+      choose an available time solt:
+    </p>
+
+    <div class="allowed-time">
+      <div class="box">8:00Am</div>
+      <div class="box">8:30 Am</div>
+      <div class="box-unavailable">9:00 AM</div>
+      <div class="box">10:00 AM</div>
+      <div class="box">10:30 PM</div>
+      <div class="box">11:00 PM</div>
+      <div class="box-unavailable">11:30 AM</div>
+      <div class="box">12:00 PM</div>
+      <div class="box-unavailable">1:00 AM</div>
+      <div class="box-unavailable">1:30 AM</div>
+      <div class="box">2:00 PM</div>
+      <div class="box">3:00 PM</div>
+      <div class="box-unavailable">4:00 AM</div>
+      <div class="box">4:30 PM</div>
+      <div class="box-unavailable">5:00 AM</div>
+      <div class="box">6:00 PM</div>
+    </div>
+    <button class="reserve-butt">Reserve Naw</button>
+
+
+
+  </section>
+  </div>
+</body>
+
+</html>
